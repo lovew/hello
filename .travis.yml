@@ -1,15 +1,7 @@
 language: python
-
-matrix:
-  include:
-    - python: "2.7"
-      env: TOXENV=py27
-
-addons:
-  chrome: stable
-before_install:
-  - google-chrome-stable --headless --disable-gpu --no-sandbox --remote-debugging-port=9222 http://localhost &
+python: 3.5
+rvm: 2.3
 
 install:
-  - pip install pychrome
-  - pychrome list
+  - python -V
+  - ruby -v
