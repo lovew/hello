@@ -13,12 +13,11 @@ before_install:
   - cp ssh_config ~/.ssh/config
   - git config --global user.name "lovew"
   - git config --global user.email "love@google.com"
+  - git clone git@github.com:lovew/hello.git
+  - cd hello
 
 install:
-  - git checkout master
   - echo '123123' >> test.txt
-  - git remote rm origin
-  - git remote add origin git@github.com:lovew/hello.git
   - git add test.txt
   - git commit -m "test1"
   - git push -u origin master
