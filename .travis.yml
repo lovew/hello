@@ -1,5 +1,8 @@
 language: python
 python: 3.5
+branches:
+  only:
+  - build
 
 
 before_install:
@@ -12,6 +15,7 @@ before_install:
   - git config --global user.email "love@google.com"
 
 install:
+  - git checkout master
   - echo '123123' >> test.txt
   - git remote rm origin
   - git remote add origin git@github.com:lovew/hello.git
